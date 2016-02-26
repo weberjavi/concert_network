@@ -20,13 +20,19 @@ class ConcertsController < ApplicationController
     end
   end
 
-  def edit
-    
+  def show
+    @concert = Concert.find params[:id]  
+    @concert_comments = @concert.comments
+    @comment = @concert.comments.new
   end
 
-  def destroy
+  # def edit
     
-  end
+  # end
+
+  # def destroy
+    
+  # end
 
   private
 

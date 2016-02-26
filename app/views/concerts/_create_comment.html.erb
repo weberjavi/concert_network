@@ -1,0 +1,15 @@
+<h3>Comentarios</h3>
+<% @concert_comments.each do |comment|%>
+<p><%= comment.name %> said: <%= comment.comment %></p>
+<% end %>
+
+<h3>Añade un comentario</h3>
+<%= form_for [@concert, @comment] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :comment %>
+  <%= f.text_field :comment %>
+  <br>
+  <%= f.submit "send" %>
+<% end %>

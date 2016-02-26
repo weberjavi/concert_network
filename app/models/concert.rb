@@ -1,4 +1,5 @@
 class Concert < ActiveRecord::Base
+  has_many :comments
   validates :artist, :venue, :city, :price, :description, :date, presence: true
 
   def self.today_concerts

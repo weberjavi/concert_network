@@ -16,7 +16,7 @@
   <ul>
     <% @actual_month_concerts.each do |concert|%>
       <li>
-        <p>Artist: <%= concert.artist %> // <%= concert.description %></p>
+        <p><%= link_to("#{concert.artist}", concert_path(concert.id), class: "artist-name") %> // <%= concert.description %></p>
       </li>
     <% end %>
   </ul>
