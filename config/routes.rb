@@ -54,6 +54,6 @@ Rails.application.routes.draw do
     #     resources :products
   #   end
 
-  resources :concerts, only: [:create, :new, :edit, :destroy]
+  resources :concerts, only: [:index, :create, :new, :edit, :destroy]
 
 end

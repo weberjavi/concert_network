@@ -1,0 +1,23 @@
+<main>
+  <h2>Today's events</h2>
+  <ul>
+    <% @today_concerts.each do |concert|%>
+      <li>
+        <p>Artist: <%= concert.artist %></p>
+        <p>Venue: <%= concert.venue %></p>
+        <p>Price: <%= concert.price %></p>
+        <img src="#{concert.image}" alt="">
+      </li>
+    <% end %>
+  </ul>
+</main>
+<aside>
+  <h3>Concerts this month</h3>
+  <ul>
+    <% @actual_month_concerts.each do |concert|%>
+      <li>
+        <p>Artist: <%= concert.artist %> // <%= concert.description %></p>
+      </li>
+    <% end %>
+  </ul>
+</aside>
